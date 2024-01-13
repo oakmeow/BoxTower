@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
     public Box currentBox;
     public int score;
     public TextMeshProUGUI scoreText;
+    public CameraFollow cameraFollow;
+    public int moveCount;
 
     private void Awake()
     {
@@ -48,5 +50,14 @@ public class GameController : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
+    }
+    public void MoveCamera()
+    {
+        moveCount++;
+        if (moveCount == 3)
+        {
+            moveCount = 0;
+            cameraFollow.targetPos.y += 2;
+        }
     }
 }

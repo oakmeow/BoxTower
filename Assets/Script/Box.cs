@@ -71,6 +71,7 @@ public class Box : MonoBehaviour
         {
             ignoreCollision = true;
             GameController.instance.addScore();
+            GameController.instance.MoveCamera();
             Invoke("OnGround", 1f);
         }
     }
