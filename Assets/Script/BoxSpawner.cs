@@ -11,12 +11,6 @@ public class BoxSpawner : MonoBehaviour
         SpawnBox();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SpawnBox()
     {
         GameObject obj = Instantiate(box_prefab);
