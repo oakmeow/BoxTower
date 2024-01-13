@@ -65,7 +65,7 @@ public class Box : MonoBehaviour
         if(target.gameObject.tag=="Ground")
         {
             ignoreCollision = true;
-            Invoke("OnGround", 2f);
+            Invoke("OnGround", 1f);
         }
         if (target.gameObject.tag == "Box")
         {

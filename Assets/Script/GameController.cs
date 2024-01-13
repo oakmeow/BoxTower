@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public CameraFollow cameraFollow;
     public int moveCount;
+    private int count = 0;
 
     private void Awake()
     {
@@ -57,7 +58,9 @@ public class GameController : MonoBehaviour
         if (moveCount == 3)
         {
             moveCount = 0;
-            cameraFollow.targetPos.y += 2;
+            cameraFollow.targetPos.y += (2f + count);
+            count++;
+            if (count == 4) count = 1;
         }
     }
 }
